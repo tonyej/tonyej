@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
 * {
   box-sizing: border-box;
   color: #333;
@@ -5,6 +7,40 @@
 
 body {
   background-color: #ededed;
-  margin: 0;
+  margin: 0 10%;
   font-family: Roboto, Verdana, sans-serif;
+}
+
+body::after {
+  content: "";
+  background-image: url("./img/alligatorfalls.jpg");
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.text-wrapper * {
+  -webkit-transform: translateY(120%);
+  transform: translateY(120%);
+  opacity: 0;
+  margin-bottom: 2rem;
+}
+
+.loaded .text-wrapper * {
+  -webkit-animation: fadeAndScale 1.1s cubic-bezier(0.54, 0.46, 0.54, 0.94) 1s
+    forwards;
+  animation: fadeAndScale 1.1s cubic-bezier(0.54, 0.46, 0.54, 0.94) 1s forwards;
+}
+
+@keyframes fadeAndScale {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -1,11 +1,17 @@
 import React from "react";
+import BodyAnimate from "./BodyAnimate";
 
 const Introduction = () => {
   return (
-    <div>
-      <h1>Introduction Section</h1>
-      <p>This is introduction info etc</p>
-    </div>
+    <BodyAnimate isDark={true}>
+      <div className="text-wrapper">
+        <h1>Tony E. Johnson</h1>
+        <p>
+          Thanks for your patience while I rebuild my portfolio and update it to
+          reflect my most recent work.
+        </p>
+      </div>
+    </BodyAnimate>
   );
 };
 
